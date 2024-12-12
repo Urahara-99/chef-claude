@@ -1,15 +1,16 @@
 import React from 'react'
 
 const Main = () => {
-  const ing = ["chicken", "spice", "curry"];
-  const ingMap= ing.map((data)=>{
+
+  const [list, setList]= React.useState([]);
+  const ingMap= list.map((data)=>{
         return <li key={data}>{data}</li>
     })
   function submit(event){
     event.preventDefault()
-    console.log("submitted!");
     const formData= new FormData(event.currentTarget)
     const newIng = formData.get("ingredient");
+    setList(prev=> [...prev, newIng])
     console.log(newIng);    
   }
   return (
