@@ -5,10 +5,10 @@ function handleSubmit(event){
     const formData= new FormData(Fdata)
     const gmail= formData.get("email")
     console.log(gmail);
-    
+    Fdata.reset()    
   }
   
-  const Rough=()=> {
+  const FormSubmit=()=> {
     return (
       <section>
         <h1>Signup form</h1>
@@ -28,6 +28,6 @@ function handleSubmit(event){
     )
   }
   
-  export default Rough
+  export default FormSubmit
   
   
