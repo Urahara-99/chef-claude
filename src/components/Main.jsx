@@ -7,15 +7,13 @@ const Main = () => {
         return <li key={data}>{data}</li>
     })
   function submit(event){
-    event.preventDefault()
-    const formData= new FormData(event.currentTarget)
-    const newIng = formData.get("ingredient");
+    const newIng = event.get("ingredient");
     setList(prev=> [...prev, newIng])
     console.log(newIng);    
   }
   return (
     <main>
-    <form onSubmit={submit}>
+    <form action={submit} >
         <input 
         type='text'
         placeholder='e.g spices'
@@ -24,7 +22,9 @@ const Main = () => {
         />
         <button>Add ingredient</button>
     </form>
+    <div className='add-items'>
     {ingMap}
+    </div>
     </main>
   )
 }

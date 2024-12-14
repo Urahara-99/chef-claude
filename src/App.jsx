@@ -1,3 +1,4 @@
+import FormAction from './components/FormAction'
 import FormSubmit from './components/FormSubmit'
 import Header from './components/Header'
 import Main from './components/Main'
@@ -10,7 +11,7 @@ function App() {
     <>
       {/* <Header />
       <Main /> */}
-      <FormSubmit />
+      <FormAction />
     </>
   )
 }
