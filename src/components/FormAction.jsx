@@ -7,10 +7,19 @@ const FormAction = () => {
         const pass= event.get("password")
         const emp= event.get("emp")
         const pre= event.getAll("preference")
+        const food= event.get("food")
         console.log(gmail);
         console.log(pass);
         console.log(emp);
         console.log(pre);
+        console.log(food);
+        console.log(Object.fromEntries(event)); //to retrive every data from the from as a object. however the checkbox still only give one value.
+        const addCheckboxData= {
+          ...Object.fromEntries(event),
+          pre
+        }
+        console.log(addCheckboxData); //this will do the checkbox addition in the object array
+        
       }
   return (
     <section>
@@ -60,7 +69,13 @@ const FormAction = () => {
             </label>
           </fieldset>
 
-          
+          <label>Emp food preference</label>
+            <select name='food'>
+              <option >--choose from choice--</option>
+              <option value='chicken'>chicken</option>
+              <option value='fried rice'>fried rice</option>
+              <option value='veggies'>veggies</option>
+            </select>
           <button>Submit</button>
           
         </form>

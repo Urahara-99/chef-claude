@@ -1,22 +1,19 @@
 import React from 'react'
+export default function Joke(props) {
 
-export default function Rough() {
+  const [isShown, setIsShown]= React.useState(false);
 
-    const [myFavoriteThings, setmyFavouriteThings] = React.useState([])
-    const allFavoriteThings = ["💦🌹", "😺", "💡", "🔥🧤", "🟤🎁", 
-    "🐴", "🍎🥧", "🚪🔔", "🛷🔔", "🥩🍝"]
-    const thingsElements = myFavoriteThings.map(thing => <p key={thing}>{thing}</p>)
-  
-    function addFavoriteThing() {
-        setmyFavouriteThings(prev=>[...prev, allFavoriteThings[prev.length]])
-    }
-    
-    return (
-      <main>
-        <button onClick={addFavoriteThing}>Add item</button>
-        <section aria-live="polite">
-          {thingsElements}
-        </section>
-      </main>
-    )
-  }
+  function toggleShown() {
+    setIsShown(prevShown => !prevShown)
+}
+
+return (
+    <div>
+        {props.setup && <h3>{props.setup}</h3>}
+        {isShown && <p>{props.punchline}</p>}
+        <button onClick={toggleShown} >{isShown ? "Hide punch" : "Show punch"}</button>
+        <hr />
+    </div>
+)
+
+}
