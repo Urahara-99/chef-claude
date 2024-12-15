@@ -4,22 +4,15 @@ import Header from './components/Header'
 import Main from './components/Main'
 import PropsMaking from './components/PropsMaking'
 import jokesData from "./data"
+import RoughWork from './components/RoughWork'
 
 
 export default function App() {
-  const jokeElements = jokesData.map(joke => {
-      return (
+    return(
+        <>
+        <Header />
+        < Main />
+        </>
+)
 
-    < PropsMaking
-              key={joke.id}
-              setup={joke.setup} 
-              punchline={joke.punchline} 
-          />
-      )
-  })
-  return (
-      <div>
-          {jokeElements}
-      </div>
-  )
 }

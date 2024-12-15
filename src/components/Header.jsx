@@ -7,7 +7,7 @@ const Header = () => {
     <div>
         <header>
         <img src={chef}/>
-        <h2>Chef Guild</h2>
+        <h2>Chef Claude</h2>
         </header>
     </div>
     </>

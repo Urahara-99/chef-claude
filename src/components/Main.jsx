@@ -23,7 +23,17 @@ const Main = () => {
         <button>Add ingredient</button>
     </form>
     <div className='add-items'>
-    {ingMap}
+    <section>
+      <h2>Ingredients in hand:</h2>
+      <ul>{ingMap}</ul>
+      <div>
+        <div>
+        <h3>Ready for your recipe?</h3>
+        <p>Generate a recipe from your list of ingredients.</p>
+        </div>
+        <button>Get a recipe</button>
+      </div>
+    </section>
     </div>
     </main>
   )
