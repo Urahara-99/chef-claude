@@ -1,5 +1,5 @@
 import React from 'react'
-export default function Joke(props) {
+export default function PropsMaking(props) {
 
   const [isShown, setIsShown]= React.useState(false);
 
@@ -10,7 +10,7 @@ export default function Joke(props) {
 return (
     <div>
         {props.setup && <h3>{props.setup}</h3>}
-        {isShown && <p>{props.punchline}</p>}
+        { isShown ? <p>{props.punchline}</p> : null}
         <button onClick={toggleShown} >{isShown ? "Hide punch" : "Show punch"}</button>
         <hr />
     </div>
