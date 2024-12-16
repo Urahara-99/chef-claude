@@ -6,7 +6,7 @@ const RoughWork = (props) => {
   const [display, setDisplay] = React.useState(props.on);
 
   function toggleDisplay(){
-    setDisplay(!display);
+    setDisplay(prev => !prev);
   }
   const styles = {
   backgroundColor: props.color,
