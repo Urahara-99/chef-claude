@@ -1,13 +1,11 @@
 import React from 'react'
 import padData from '../pads'
+import RoughWork from './RoughWork';
 
-const Rough = ({darkMode}) => {
+const Rough = () => {
     const [pads, setPads]= React.useState(padData);
-    const styles = {
-        background: darkMode ? " #222222" :" #cccccc",
-    }
     const displayColor = pads.map(pad=>(
-        <button key={pad.id} style={styles}></button>
+        <RoughWork key={pad.id} color={pad.color} display={pad.on}/>
     ))
   return (
     <main>

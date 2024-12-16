@@ -1,14 +1,19 @@
 import React from 'react'
-import Rough from './Rough';
+
 
 const RoughWork = (props) => {
   
- 
+  const [display, setDisplay] = React.useState(props.on);
+
+  function toggleDisplay(){
+    setDisplay(!display);
+  }
+  const styles = {
+  backgroundColor: props.color,
+ }
   return (
     <>
-    <header>
-      <p>{props.user}</p>
-    </header>
+        <button style={styles} className={display ? "on" : null } onClick={toggleDisplay}></button>
     </>
   )
 }
