@@ -1,9 +1,15 @@
 import React from 'react'
+import Rough from './Rough';
 
 const RoughWork = (props) => {
+  
  
   return (
-    <h2>{props.count}</h2>
+    <>
+    <header>
+      <p>{props.user}</p>
+    </header>
+    </>
   )
 }
 

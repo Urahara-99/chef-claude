@@ -9,14 +9,19 @@ import React from 'react'
 import ToggleState from './components/ToggleState'
 
 import PropsReceiver from './components/PropsReceiver'
+import Rough from './components/Rough'
 
 export default function App() {
+
+    const [username, setUsername]= React.useState('abc');
 
     return(
         <>
         {/* <Header />
         < Main /> */}
-       <PropsReceiver />
+       <RoughWork user={username} />
+       <Rough user={username} />
+
         </>
 )
 

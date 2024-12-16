@@ -20,17 +20,17 @@ const PropsReceiver = () => {
     <main>
             <article className="card">
             <img
-            src={avatar}
-            className="avatar"
-            alt="User profile picture of John Doe"
+              src={avatar}
+              className="avatar"
+              alt="User profile picture of John Doe"
             />
             <div className="info">
             <ToggleState isFilled={contact.isFavorite} handle={toggleFavorite}/>
             <h2 className="name">
-            {contact.firstName}
+             {contact.firstName}
             </h2>
-            <p className="contact">{contact.phone}</p>
-            <p className="contact">{contact.email}</p>
+              <p className="contact">{contact.phone}</p>
+              <p className="contact">{contact.email}</p>
             </div>
 
             </article>
