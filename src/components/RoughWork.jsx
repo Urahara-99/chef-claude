@@ -1,12 +1,9 @@
 import React from 'react'
 
-const RoughWork = () => {
-  const [messages, setMessages] = React.useState(['a', 'b']);
+const RoughWork = (props) => {
+ 
   return (
-     <div>
-      <h1>{messages.length ? "you have " :"You all caught up!"}</h1>
-     </div>
-
+    <h2>{props.count}</h2>
   )
 }
 
