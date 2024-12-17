@@ -1,16 +1,11 @@
 import React from 'react'
 
 const RoughWork = (props) => {
-  
-  const [display, setDisplay] = React.useState(props.on);
-  
-  const styles = {
-  backgroundColor: props.color,
- }
+    
   return (
     <>
-      <button style={styles}
-      className={display ? "on" : null }
+    <button style={{ backgroundColor: props.color}}
+      className={props.display ? "on" : undefined }
       onClick={()=>props.toggle(props.id)}></button>
     </>
   )
