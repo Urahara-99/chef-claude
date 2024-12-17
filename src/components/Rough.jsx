@@ -8,13 +8,9 @@ const Rough = () => {
         <RoughWork key={pad.id} color={pad.color} id={pad.id} display={pad.on} toggle={toggleButton}/>
     ))
     function toggleButton(id){
-      setPads(prev=>{
-        return (
-        prev.map((pad)=>(
-          pad.id === id ?  
-          {...pad, on: !pad.on} : pad ))
-        )})
-    }
+      setPads(prev=> prev.map(pad=>{
+        return pad.id === id ? {...pad, on: !pad.on} : pad })
+        )}
     
   return (
   

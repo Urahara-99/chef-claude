@@ -141,10 +141,10 @@ button {
 button.on {
     opacity: 1;
 }
-.button-normal{
+/* .button-normal{
     background-color: azure;
     width: 120px;
     height: 30px;
     color: rgb(68, 76, 76);
     opacity: 1;
-}
+} */

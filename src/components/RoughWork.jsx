@@ -9,7 +9,9 @@ const RoughWork = (props) => {
  }
   return (
     <>
-      <button style={styles} className={display ? "on" : null } onClick={()=>props.toggle(props.id)}></button>
+      <button style={styles}
+      className={display ? "on" : null }
+      onClick={()=>props.toggle(props.id)}></button>
     </>
   )
 }
