@@ -14,10 +14,10 @@ export default function App() {
 
     return(
         <>
-        {/* <Header />
-        < Main /> */}
-       {/* <RoughWork user={username} /> */}
-       <Rough darkMode={true}/>
+        <Header />
+        < Main />
+       {/* <RoughWork user={username} />
+       <Rough darkMode={true}/> */}
         </>
 )
 
