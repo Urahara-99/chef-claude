@@ -1,6 +1,7 @@
 import React from 'react'
 import Receipe from './Receipe';
 import IngList from './ingList';
+import { getRecipeFromMistral } from '../ai';
 
 const Main = () => {
 
