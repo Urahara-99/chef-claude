@@ -5,20 +5,16 @@ import { getRecipeFromMistral } from '../ai';
 
 const Main = () => {
 
-  const [list, setList]= React.useState([]);
-  const ingMap= list.map((data)=>{
-        return <li key={data}>{data}</li>
-    })
-  function submit(event){
-    const newIng = event.get("ingredient");
-    setList(prev=> [...prev, newIng])    
-  }
-  const [recipeShown, setRecipeShown] = React.useState(false);
+  const [ingredients, setIngredients]= React.useState([]);
+  const [recipeShown, setRecipeShown] = React.useState("");
   async function getRecipe(){
-    const generateRecipe = await getRecipeFromMistral(ingMap);
-    console.log(generateRecipe);
+    const generateRecipe = await getRecipeFromMistral(ingredients);
+    setRecipeShown(generateRecipe);
   }
-
+  function submit(formData){
+    const newIng = formData.get("ingredient");
+    setIngredients(prev=> [...prev, newIng])    
+  }
   return (
     <main>
     <form action={submit} >
@@ -30,8 +26,15 @@ const Main = () => {
         />
         <button>Add ingredient</button>
     </form>
-    <IngList listShow={getRecipe} mapList={ingMap}/>
-    <Receipe getReceipe={recipeShown}/>
+    {ingredients.length > 0 && 
+    <IngList 
+      ingredients={ingredients}
+      getRecipe={getRecipe}
+    />}
+    {recipeShown &&
+      <Receipe
+        recipe={recipeShown}
+      />}
     </main>
   )
 }
