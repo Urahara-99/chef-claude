@@ -14,8 +14,9 @@ const Main = () => {
     setList(prev=> [...prev, newIng])    
   }
   const [recipeShown, setRecipeShown] = React.useState(false);
-  function getRecipe(){
-    setRecipeShown(prev => !prev)
+  async function getRecipe(){
+    const generateRecipe = await getRecipeFromMistral(ingMap);
+    console.log(generateRecipe);
   }
 
   return (
