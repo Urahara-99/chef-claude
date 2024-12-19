@@ -55,10 +55,12 @@ form > button{
     border-radius: 8px;
     border: none;
     width: 150px;
+    cursor: pointer;
 }
 form > button::before{
     content: "+";
     margin-right: 5px;
+    
 }
 .add-items{
     justify-content: center;
@@ -98,6 +100,7 @@ form > button::before{
     font-size: 15px;
     margin-top: 30px;
     margin-left: 60px;
+    cursor: pointer;
 }
 .ing-list{
     font-size: 1.1rem;
@@ -107,4 +110,24 @@ ul{
 }
 .suggest-list{
     margin-top: 20px;
+}
+.suggested-recipe-container {
+    color: #142032;
+    line-height: 28px;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.suggested-recipe-container ul li, .suggested-recipe-container ol li {
+    margin-bottom: 8px;
+}
+.recipe-container{
+    display: flex;
+    margin-top: 70px;
+    padding: 30px 60px;
+    background-color: #e1e5eb;
+    border-radius: 50px;
+}
+.heading-recipe{
+    font-weight: bold;
 }
