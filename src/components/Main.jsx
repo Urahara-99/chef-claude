@@ -11,6 +11,14 @@ const Main = () => {
     const generateRecipe = await getRecipeFromMistral(ingredients);
     setRecipeShown(generateRecipe);
   }
+  
+  React.useEffect(()=>{
+    if(recipeShown.length && recipeShownArea.current){
+      recipeShownArea.current.scrollIntoView()
+    }
+  }, [recipeShown])
+
+  const recipeShownArea = React.useRef(null)
   function submit(formData){
     const newIng = formData.get("ingredient");
     setIngredients(prev=> [...prev, newIng])    
@@ -30,6 +38,7 @@ const Main = () => {
     <IngList 
       ingredients={ingredients}
       getRecipe={getRecipe}
+      ref={recipeShownArea}
     />}
     {recipeShown &&
       <Receipe

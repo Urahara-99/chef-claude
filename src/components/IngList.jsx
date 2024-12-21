@@ -6,12 +6,11 @@ const IngList = (props) => {
 ))
   return (
     <div className='add-items'>
- 
      <section className='list-recipe'>
       <h2>Ingredients in hand:</h2>
       <div className='ing-list'><ul><h4>{ingredientsListItems}</h4></ul></div>
       {props.ingredients.length > 3 ?
-      <div className='get-recipe'>
+      <div className='get-recipe' ref={props.ref}>
         <div className='recipe-box'>
         <h3>Ready for your recipe?</h3>
         <p>Generate a recipe from your list of ingredients.</p>

@@ -1,7 +1,6 @@
 import React from 'react'
 import Markdown from 'react-markdown'
 
-
 const Receipe = (props) => {
   return (
     <div className='recipe-container'>
