@@ -11,10 +11,10 @@ const Main = () => {
     const generateRecipe = await getRecipeFromMistral(ingredients);
     setRecipeShown(generateRecipe);
   }
-  
+
   React.useEffect(()=>{
     if(recipeShown.length && recipeShownArea.current){
-      recipeShownArea.current.scrollIntoView()
+      recipeShownArea.current.scrollIntoView({behavior: "smooth"})
     }
   }, [recipeShown])
 
